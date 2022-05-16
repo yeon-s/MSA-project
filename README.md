@@ -223,9 +223,9 @@ response 상태 - 200,404,400,201,401 (400번대 클라이언트 오류, 500은 
 
 ⇒ 서비스 디스커버리에 물어봄 ⇒ 반환받음 ⇒ 반환받은 정보 토대로 서비스 호출하고 요청정보 받음
 
-![Untitled](Service%20Discovery%2065e506d2d98a49e2a623cafbf8c5815d/Untitled.png)
+![Untitled](https://github.com/yeon-s/MSA-project/blob/main/image/Service%20Discovery/Untitled.png)
 
-![Untitled](Service%20Discovery%2065e506d2d98a49e2a623cafbf8c5815d/Untitled%201.png)
+![Untitled](https://github.com/yeon-s/MSA-project/blob/main/image/Service%20Discovery/Untitled%201.png)
 
 ### DiscoveryserviceApplication.java
 
@@ -239,7 +239,7 @@ Eureka 서버 역할을 하기 위해 서버자격으로 등록해야함⇒@Enab
 
  
 
-![Untitled](Service%20Discovery%2065e506d2d98a49e2a623cafbf8c5815d/Untitled%202.png)
+![Untitled](https://github.com/yeon-s/MSA-project/blob/main/image/Service%20Discovery/Untitled%202.png)
 
 ### 유레카 서버에 등록할 샘플 마이크로 서비스 ⇒userSerive
 
@@ -249,7 +249,7 @@ UserServiceApplication.java에서 @EnableDiscoveryClient 추가
 
 yml이 중요
 
-![Untitled](Service%20Discovery%2065e506d2d98a49e2a623cafbf8c5815d/Untitled%203.png)
+![Untitled](https://github.com/yeon-s/MSA-project/blob/main/image/Service%20Discovery/Untitled%203.png)
 
 - fetch-registry는 유레카 서버로부터 인스턴스들의 정보를 주기적으로 가져올 것인지를 설정하는 속성. true로 설정하면 갱신된 정보를 받겠다는 설정
 - service-url : 서버의 위치가 어디인지 지정하는 부분(유레카 서버의 위치 지정)
@@ -257,19 +257,19 @@ yml이 중요
 
 등록 후 유레카 서버 화면
 
-![Untitled](Service%20Discovery%2065e506d2d98a49e2a623cafbf8c5815d/Untitled%204.png)
+![Untitled](https://github.com/yeon-s/MSA-project/blob/main/image/Service%20Discovery/Untitled%204.png)
 
 server.port = 0 ⇒ 포트번호 랜덤하게 할당 ⇒ 유레카 서버에서는 동적으로 할당된 포트번호가 아니라 yml에 있는 포트번호를 가져오기 떄문에 여러서비스 실행해도 하나만 뜸
 
-![Untitled](Service%20Discovery%2065e506d2d98a49e2a623cafbf8c5815d/Untitled%205.png)
+![Untitled](https://github.com/yeon-s/MSA-project/blob/main/image/Service%20Discovery/Untitled%205.png)
 
 =⇒ yml에 eureka.instance.instance-id 설정하면 둘다 뜬다.
 
-![Untitled](Service%20Discovery%2065e506d2d98a49e2a623cafbf8c5815d/Untitled%206.png)
+![Untitled](https://github.com/yeon-s/MSA-project/blob/main/image/Service%20Discovery/Untitled%206.png)
 
 application과 터미널에서 bootRun으로 실행시킨 두개의 userService 확인
 
-![Untitled](Service%20Discovery%2065e506d2d98a49e2a623cafbf8c5815d/Untitled%207.png)
+![Untitled](https://github.com/yeon-s/MSA-project/blob/main/image/Service%20Discovery/Untitled%207.png)
 </br></br></br></br></br></br>
 
 
@@ -318,7 +318,7 @@ ZuulFilter : 마이크로 서비스가 요청될때 사전작업,사후작업 �
 
 dependencies는 DevTools, Lombok, Eureka Discovery Client, Gateway 추가
 
-![Untitled](API%20Gateway%20Service%20996d89dec6ba4a66ab1c9fa7245e6e48/Untitled.png)
+![Untitled](https://github.com/yeon-s/MSA-project/blob/main/image/API%20Gateway%20Service/Untitled.png)
 
 비동기로 처리되기 때문에 tomcat이 아니라 Netty로 실행
 
@@ -333,13 +333,13 @@ Filter 적용의 두가지 방법
 
 - java코드
 
-![Untitled](API%20Gateway%20Service%20996d89dec6ba4a66ab1c9fa7245e6e48/Untitled%201.png)
+![Untitled](https://github.com/yeon-s/MSA-project/blob/main/image/API%20Gateway%20Service/Untitled%201.png)
 
 자바 코드로 진행시에는 yml 파일에 게이트웨이 주석처리할것
 
 - yml파일
 
-![Untitled](API%20Gateway%20Service%20996d89dec6ba4a66ab1c9fa7245e6e48/Untitled%202.png)
+![Untitled](https://github.com/yeon-s/MSA-project/blob/main/image/API%20Gateway%20Service/Untitled%202.png)
 
 yml 파일 진행시에는 FilterConfig에 @Configuration과 @Bean 주석처리 할것
 
@@ -355,11 +355,11 @@ apply 메소드 오버라이드하여 작성
 
 yml에 CustomFilter 넣어주기
 
-![Untitled](API%20Gateway%20Service%20996d89dec6ba4a66ab1c9fa7245e6e48/Untitled%203.png)
+![Untitled](https://github.com/yeon-s/MSA-project/blob/main/image/API%20Gateway%20Service/Untitled%203.png)
 
 yml
 
-![Untitled](API%20Gateway%20Service%20996d89dec6ba4a66ab1c9fa7245e6e48/Untitled%204.png)
+![Untitled](https://github.com/yeon-s/MSA-project/blob/main/image/API%20Gateway%20Service/Untitled%204.png)
 
 # Global Filter
 
@@ -368,21 +368,21 @@ yml
 - Custom 필터와 차이점 : custimFilter는 각 라우트마다 등록해줘야함.
 - 가장 먼저 시작되고 가장 마지막에 종료된다
 
-![Untitled](API%20Gateway%20Service%20996d89dec6ba4a66ab1c9fa7245e6e48/Untitled%205.png)
+![Untitled](https://github.com/yeon-s/MSA-project/blob/main/image/API%20Gateway%20Service/Untitled%205.png)
 
 yml
 
-![Untitled](API%20Gateway%20Service%20996d89dec6ba4a66ab1c9fa7245e6e48/Untitled%206.png)
+![Untitled](https://github.com/yeon-s/MSA-project/blob/main/image/API%20Gateway%20Service/Untitled%206.png)
 
 # Logging Filter
 
-![Untitled](API%20Gateway%20Service%20996d89dec6ba4a66ab1c9fa7245e6e48/Untitled%207.png)
+![Untitled](https://github.com/yeon-s/MSA-project/blob/main/image/API%20Gateway%20Service/Untitled%207.png)
 
 - Ordered.HIGHEST_PRECEDENCE 옵션을 주면 가장 먼저 실행되고 가장 마지막에 종료됨
 
 yml
 
-![Untitled](API%20Gateway%20Service%20996d89dec6ba4a66ab1c9fa7245e6e48/Untitled%208.png)
+![Untitled](https://github.com/yeon-s/MSA-project/blob/main/image/API%20Gateway%20Service/Untitled%208.png)
 
 필터가 두개 이상이면 name 붙여줘야함
 
@@ -390,13 +390,13 @@ yml
 
 ### 게이트웨이와 서비스들
 
-![Untitled](API%20Gateway%20Service%20996d89dec6ba4a66ab1c9fa7245e6e48/Untitled%209.png)
+![Untitled](https://github.com/yeon-s/MSA-project/blob/main/image/API%20Gateway%20Service/Untitled%209.png)
 
 dependencies에 유레카 클라이언트 있어야 함.
 
 ### 게이트 웨이
 
-![Untitled](API%20Gateway%20Service%20996d89dec6ba4a66ab1c9fa7245e6e48/Untitled%2010.png)
+![Untitled](https://github.com/yeon-s/MSA-project/blob/main/image/API%20Gateway%20Service/Untitled%2010.png)
 
 uri에 lb://{서비스 이름}
 
@@ -406,11 +406,11 @@ uri에 lb://{서비스 이름}
 
 ⇒포트를 0으로(랜덤포트) 설정 ⇒ 같은 서비스 여러개 실행시켜도 유레카 대시보드에는 0 하나만 뜸⇒ 인스턴스 아이디 값을 부여하자
 
-![Untitled](API%20Gateway%20Service%20996d89dec6ba4a66ab1c9fa7245e6e48/Untitled%2011.png)
+![Untitled](https://github.com/yeon-s/MSA-project/blob/main/image/API%20Gateway%20Service/Untitled%2011.png)
 
 같은 서비스 여러개 기동했을 때 어떤 서비스가 호출되는지 확인 하기 위해 포트번호 출력해보기
 
-![Untitled](API%20Gateway%20Service%20996d89dec6ba4a66ab1c9fa7245e6e48/Untitled%2012.png)
+![Untitled](https://github.com/yeon-s/MSA-project/blob/main/image/API%20Gateway%20Service/Untitled%2012.png)
 
 결과: 게이트웨이가 라운드 로빈방식으로 서비스를 번갈아가며 호출한다. (로드 밸런싱)
 
